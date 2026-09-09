@@ -49,6 +49,8 @@ const EFaturaDetay = lazy(() => import("./pages/EFaturaDetay.tsx"));
 const UrunKategorileri = lazy(() => import("./pages/UrunKategorileri.tsx"));
 const UrunKategoriDetay = lazy(() => import("./pages/UrunKategoriDetay.tsx"));
 const Login = lazy(() => import("./pages/Login.tsx"));
+const StitchLanding = lazy(() => import("./pages/StitchLanding.tsx"));
+const StitchServicePage = lazy(() => import("./pages/StitchServicePage.tsx"));
 
 const isDemoApp = import.meta.env.MODE === "demo";
 
@@ -240,7 +242,9 @@ const App = () => (
             </Routes>
           ) : (
             <Routes>
-              <Route path="/" element={<AutoHome />} />
+              <Route path="/" element={<StitchLanding />} />
+              <Route path="/donanim" element={<StitchServicePage />} />
+              <Route path="/yazilim" element={<StitchServicePage />} />
               <Route path="/login" element={<Login />} />
               {marketingRoutes.map(([path, pageKey]) => (
                 <Route key={path} path={path} element={<MarketingPage pageKey={pageKey} />} />
