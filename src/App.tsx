@@ -49,8 +49,8 @@ const EFaturaDetay = lazy(() => import("./pages/EFaturaDetay.tsx"));
 const UrunKategorileri = lazy(() => import("./pages/UrunKategorileri.tsx"));
 const UrunKategoriDetay = lazy(() => import("./pages/UrunKategoriDetay.tsx"));
 const Login = lazy(() => import("./pages/Login.tsx"));
-const StitchLanding = lazy(() => import("./pages/StitchLanding.tsx"));
 const StitchServicePage = lazy(() => import("./pages/StitchServicePage.tsx"));
+const StitchHome = lazy(() => import("./pages/StitchHome.tsx"));
 
 const isDemoApp = import.meta.env.MODE === "demo";
 
@@ -242,7 +242,7 @@ const App = () => (
             </Routes>
           ) : (
             <Routes>
-              <Route path="/" element={<StitchLanding />} />
+              <Route path="/" element={<StitchHome />} />
               <Route path="/donanim" element={<StitchServicePage />} />
               <Route path="/yazilim" element={<StitchServicePage />} />
               <Route path="/login" element={<Login />} />
